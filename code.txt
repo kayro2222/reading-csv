@@ -5,8 +5,6 @@ let dataset1 = [];
 let dataset2 = [];
 let fullObject = [];
 let speed;
-let writeFile = '';
-let result;
 
 main();
 
@@ -52,10 +50,11 @@ function calculateSpeed(fullObject){
 		}
 	});
 
-	result = temp.sort((a, b) => {
+	let result = temp.sort((a, b) => {
 		return b.speed - a.speed;
 	});
 
+	let writeFile = '';
 	result.filter(data => {
 		writeFile += data.name+'\n';
 	});
